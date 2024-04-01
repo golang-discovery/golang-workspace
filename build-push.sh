@@ -10,6 +10,7 @@ END_COMMENT
 docker buildx build \
 --platform=linux/amd64,linux/arm64 \
 --build-arg="GO_VERSION=1.22.1" \
+--build-arg="USER_NAME=golang-discovery" \
 --push -t k33g/golang-workspace:0.0.0 .
 
 docker pull k33g/golang-workspace:0.0.0
